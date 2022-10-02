@@ -54,6 +54,16 @@ h1, h2, h3, h4 {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
-    font-size: 6pt;  <!--이 부분은 내가 임의로 추가함. 이제 포스트의 타이틀 폰트가 제어됨.-->
+    font-size: 18pt;  <!--이 부분은 내가 임의로 추가함. 이제 포스트의 타이틀 폰트가 제어됨.-->
+}
+
+.floating {
+  position: fixed; 
+  right: 50%; 
+  top: 180px; 
+  margin-right: -400px;
+  text-align:center;
+  width: 220px;
+  transparrent: 0;
 }
 
