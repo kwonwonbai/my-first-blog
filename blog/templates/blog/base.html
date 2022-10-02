@@ -7,14 +7,31 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
-    <body>
-        <div class="page-header"><img  src="{%static 'blog/way0.jpg' %}">
+    <body >
+        <!--
+        <div class="page-header"><img  src="{%static 'img/way0.jpg' %}">
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <h1><a href="/">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;...그리움이 쌓이네... </a></h1>
         </div>
-        <div class="content container">
+        -->
+        
+        <!-- 배경이미지 연습중임, url접근방식이  안됨   -->
+        <!--<div style="background:url('../img/back_gif.gif'); height: 200px; width: 400px; border: 1px solid black;">Example of a DIV element with a background image:</div> -->
+        <div style="background-image: url('');">
+            <!-- image -->
+        </div>
+        
+        <div class="cover" >
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <br>
+            <h1><a href="/">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;팔색조는 보셨나요... </a></h1>
+        </div>
+
+        <hr style="border: solid 8px green;"> <!-- 수평선 넣기 -->
+
+        <div class="content container" >
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8" style="margin-left:220px;margin-top:20px" > <!-- style="margin-left:220px;margin-top:20px" 부분은 왼쪽 마진 설정 -->
                     {% block content %}
                     {% endblock %}
                 </div>
@@ -22,3 +39,4 @@
         </div>
     </body>
 </html>
+
