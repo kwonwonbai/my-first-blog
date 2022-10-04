@@ -31,3 +31,18 @@ class Photo(models.Model):
 
 # 마이그레이트 이미지싱크: --run-syncdb은 마이그레이션을 하지않고 테이블을 만든다는 뜻이라고 함. 무슨말인지는 모르겠음 
   #  python manange.py migrate --run-syncdb 
+
+# 댓글달기
+class Comment(models.Model):
+    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
+    author = models.CharField(max_length=200)
+    text = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text

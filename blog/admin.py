@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Photo
+from .models import Post, Photo, Comment
 
 # Photo 클래스를 inline으로 나타낸다.
 class PhotoInline(admin.TabularInline):
@@ -10,3 +10,4 @@ class PostAdmin(admin.ModelAdmin):
     inlines = [PhotoInline, ]
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Comment)
