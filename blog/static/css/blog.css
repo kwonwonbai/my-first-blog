@@ -58,13 +58,7 @@ h1, h2, h3, h4 {
 }
 
 .floating {
-  position: fixed; 
-  right: 100%; 
-  top: 180px; 
-  margin-right: -150px;
-  text-align:center;
-  width: 220px;
-  transparrent: 0;
+
 }
 
 .comment {
