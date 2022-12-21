@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
 }
 
 .post-form textarea, .post-form input {
-    width: 100%;
+    width: 100%;  
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -58,13 +58,11 @@ h1, h2, h3, h4 {
 }
 
 .floating {
-  position: fixed; 
-  right: 100%; 
-  top: 690px; 
-  margin-right: -1720px;
-  text-align:center;
-  width: 220px;
-  transparrent: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+    
 }
 
 .comment {
