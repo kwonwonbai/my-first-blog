@@ -7,7 +7,11 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <!-- 장고걸스강좌 본래의 코드는 이것인데, 
+              <p>{{ post.text|linebreaksbr|truncatechars:100 }}</p>  
+              여기에 메인페이지에 노출되는 본문글자수를 제한하기 위해 "|truncatechars:100" 을 추가함
+            -->
+            <p>{{ post.text|linebreaksbr|truncatechars:100 }}</p>
             <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
         </div>
     {% endfor %}
